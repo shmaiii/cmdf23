@@ -5,8 +5,31 @@ import "./ViewEntry.css";
 import posFrog from '../image/good-frog.png';
 import neuFrog from '../image/neutral-frog.png';
 import negFrog from '../image/bad-frog.png';
+import axios from 'axios';
 
 const ViewEntry = (props) => {
+    let [journal, setJournal] = useState(props.entry.journal);
+
+    const handleChange = (event) => {
+        setJournal(event.target.value);
+    }
+    const editEntry = (event) => {
+        event.preventDefault();
+
+        const updatedEntry = {
+            journal: journal,
+        }
+
+        axios
+        .put(`http://localhost:3001/api/updateEntry`, updatedEntry)
+        .then(response => {
+            console.log(response);
+            props.setEntry({
+                ...props.entry,
+            })
+
+        })
+    }
 
     return (
         <React.Fragment>
@@ -19,8 +42,9 @@ const ViewEntry = (props) => {
 id="outlined-multiline-static"
 multiline
 rows={8}
-defaultValue={props.entry.journal}
+defaultValue={journal}
 className="text-field-container"
+onChange={handleChange}
 
 
 
@@ -31,7 +55,7 @@ className="text-field-container"
 </Box>
 
 
-<button className="enter-button">Edit</button>
+<button className="enter-button" onClick={editEntry}>Edit</button>
 
 
 
