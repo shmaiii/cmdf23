@@ -20,7 +20,7 @@ export const SidebarData = [
     {
         title: 'Settings',
         path: '/settings',
-        icon: <IoIcons.IoIosSettings style = {{color: '#01575C', width:"60%", height:"60%"}}/>,
+        icon: <IoIcons.IoIosSettings style = {{color: '#01575C'}}/>,
         cName: 'nav-text'
     },
     {
