@@ -34,7 +34,7 @@ function ActivityBar() {
             </div>
         <div class="float-child2">
           <div className="activity-bar-text" align="center">
-            <img src={activityLogo} style={{width: "15%", height: "15%"}}/>
+            <img class="activity-image" src={activityLogo} style={{width: "15%", height: "15%"}}/>
             <p className="activitybar-text"> Activity</p>
           </div>
 

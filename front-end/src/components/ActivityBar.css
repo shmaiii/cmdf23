@@ -35,6 +35,8 @@
     font-weight: bold;
     color: #01575C;
     margin-right: 10px;
+    margin-bottom: 27px;
+    margin-left: 5px;
   }
 
   .float-container {
@@ -68,4 +70,8 @@ p {
   border-color: rgba(255, 255, 255, 0) !important;
   width: 150px;
   float: right;
+}
+
+.activity-image {
+  margin-left: 13px;
 }
