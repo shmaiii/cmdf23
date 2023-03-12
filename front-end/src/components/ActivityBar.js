@@ -11,6 +11,7 @@ import grace from '../images/Group 8.png';
 import './ActivityBar.css';
 import Home from '../pages/Home';
 import Button from 'react-bootstrap/Button';
+import activityLogo from '../images/activity_logo.png';
 
 
 function ActivityBar() {
@@ -30,8 +31,8 @@ function ActivityBar() {
               <Home/>
             </div>
         <div class="float-child2">
-          <div className="activity-bar-text">
-            <FiIcons.FiActivity style = {{color: '#01575C'}} />
+          <div className="activity-bar-text" align="center">
+            <img src={activityLogo} style={{width: "15%", height: "15%"}}/>
             <p className="activitybar-text"> Activity</p>
           </div>
 
