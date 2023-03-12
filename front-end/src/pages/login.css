@@ -1,0 +1,41 @@
+.form-group {
+
+    margin-left: 650px;
+    margin-right: 50px;
+    margin-top: 60px;
+    
+    
+    
+  }
+
+
+.btn-primary {
+    background-color: #01575C !important;
+    border-color: #01575C !important;
+    border-radius: 10px !important;
+    padding: 10px 50px !important;
+    margin-left: 650px;
+    margin-right: 50px;
+    
+  }
+
+  h3 {
+
+    margin-left: 650px;
+    margin-right: 50px;
+    margin-top: 60px;
+    padding-top: 200px;
+    text-align: left;
+  }
+
+ .form-group label {
+    text-align: left;
+
+ }
+
+ .img{
+    float: left;
+    
+    
+
+ }

@@ -1,0 +1,168 @@
+/* Style the component root */
+.create-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: 'Public Sans', sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 1440px;
+  }
+  
+  /* Style the title */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Style the text field container */
+  .text-field-container {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 790px;
+    height: 266px;
+  }
+  
+  .enter-button {
+    background-color: #E1F396;
+    margin-top: 0px;
+    color: #01575C;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 60px;
+    font-weight: 600;
+  }
+  
+  .enter-button:hover {
+    background-color: #59BA89;
+    color: #FFFFFF;
+
+  }
+
+  .upload-button {
+    background-color: #E1F396;
+    margin-top: 8px;
+    margin-left: 15px;
+    color: #01575C;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 60px;
+    font-weight: 600;
+  }
+  
+  .upload-button:hover {
+    background-color: #59BA89;
+    color: #FFFFFF;
+
+  }
+  
+  /* Style the text field label */
+  .text-field-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #01575C;
+  }
+  
+  /* Style the text field */
+  .text-field {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    resize: vertical;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  /* Style the text field on focus */
+  .text-field:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Style the prediction text */
+  .prediction-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #01575C;
+    text-align: left;
+  }
+  
+  /* Style the picture options container */
+  .picture-options-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: #01575C;
+
+  }
+  
+  /* Style the picture option */
+  .picture-option {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #01575C;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  /* Style the image URL text field */
+  .image-url-text-field {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+ 
+  
+  /* Style the submit button */
+  .submit-button {
+    margin-top: 20px;
+    background-color: #2196f3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Style the submit button on hover */
+  .submit-button:hover {
+    background-color: #0d8bf2;
+  }
+  
+
+  .column1 {
+    flex: 25%;
+
+    
+  }
+
+  .column2 {
+    flex: 80%;
+    
+  }
+    .row {
+        display: flex;
+    }
+
