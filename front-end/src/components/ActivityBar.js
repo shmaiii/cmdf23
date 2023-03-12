@@ -12,6 +12,7 @@ import './ActivityBar.css';
 import Home from '../pages/Home';
 import Button from 'react-bootstrap/Button';
 import activityLogo from '../images/activity_logo.png';
+import Navbar from './Navbar';
 
 
 function ActivityBar() {
@@ -21,6 +22,7 @@ function ActivityBar() {
         <header> 
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
         </header>
+        <Navbar/>
         <div class="float-container">
             <div class="float-child1">
               <p>Hi Emily, how are you</p>

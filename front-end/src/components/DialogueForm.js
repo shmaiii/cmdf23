@@ -23,11 +23,16 @@ export default function FormDialog(props) {
     setOpen(false);
   };
   let content;
+  let title;
   if (status === "create"){
     content = <CreateEntry />
+    title = "Add a diary entry"
   } else {
     content = <ViewEntry />
+    title = "Your Diary Entry"
   }
+
+  
 
   return (
     <div>
@@ -41,7 +46,7 @@ export default function FormDialog(props) {
           fontSize= {"40px"}
           color= {"#01575C"}
         >
-        Add a diary entry <span id="title-date"> March 12, 2023</span></DialogTitle>
+        {title} <span id="title-date"> March 12, 2023</span></DialogTitle>
         <DialogContent>
             {content}
         </DialogContent>

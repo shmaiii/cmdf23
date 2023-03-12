@@ -13,26 +13,29 @@ import Calendar from 'react-calendar';
 import './calendar.css';
 import CreateEntry from './pages/CreateEntry';
 import FormDialog from './components/DialogueForm';
+import Login from './pages/login';
 
 function App() {
   return (
-    <>
+    <React.Fragment>
+      
+     
       <Router>
-      <ActivityBar/>
-        <Navbar/>
-        <div className="container">
+        {/* <ActivityBar/>
+        <Navbar/> */}
+        
           
-
           <Routes>
-            <Route path='/' exact component={Home}/>
+            <Route path='/' element={<ActivityBar />} />
             <Route path='/myfriends' component={Myfriends}/>
             <Route path='/profile' component={Profile}/>
             <Route path='/settings' component={Settings}/>
+            <Route path="/login" element={<Login />} />
           </Routes>
-        </div>
-        
       </Router>
-    </>
+
+      {/* <Login/> */}
+    </React.Fragment>
 
 
 // function App() {
