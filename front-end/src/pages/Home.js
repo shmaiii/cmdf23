@@ -1,11 +1,23 @@
 import Calendar from 'react-calendar';
 import '../calendar.css';
 import Button from 'react-bootstrap/Button';
+import { IoMdToday } from 'react-icons/io';
 
 
 function Home() {
-    const addImage = () => 
-        {<img src="./images/frog_bad.png" alt="bad frog" width="100" height="100"/>}
+     const addImage = (value) => {
+        let date = value.toString();
+        let subDate = date.substring(0,10);
+        console.log(subDate);
+     }
+    
+    const clickDay = (value, event) => {
+        let date = value.toString();
+        let subDate = date.substring(4,10);
+        console.log(subDate);
+        if  (subDate == "Mar 11") {
+        console.log("Hiii");
+    }}
     
   return (
     <div className="Home">
@@ -17,7 +29,7 @@ function Home() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"}}>
-              <Calendar calendarType="US" next2Label="" prev2Label="" showNeighboringMonth={false} tileContent={addImage}/>
+              <Calendar calendarType="US" next2Label="" prev2Label="" showNeighboringMonth={false} onClickDay={clickDay} tileContent={addImage}/>
         </div>
       
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

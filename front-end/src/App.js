@@ -11,6 +11,8 @@ import ActivityBar from './components/ActivityBar';
 // import logo from './logo.svg';
 import Calendar from 'react-calendar';
 import './calendar.css';
+import CreateEntry from './pages/CreateEntry';
+import FormDialog from './components/DialogueForm';
 
 function App() {
   return (
@@ -31,6 +33,13 @@ function App() {
         
       </Router>
     </>
+
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <FormDialog status="create"/>
+//     </div>
   );
 }
 
