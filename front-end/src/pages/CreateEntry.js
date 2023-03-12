@@ -5,6 +5,10 @@ import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import axios from 'axios';
 import { create } from '@mui/material/styles/createTransitions';
+import posFrog from '../image/good-frog.png';
+import neuFrog from '../image/neutral-frog.png';
+import negFrog from '../image/bad-frog.png';
+
 // import { useNavigate } from "react-router-dom";
 
 const CreateEntry = (props) => {
@@ -13,6 +17,7 @@ const CreateEntry = (props) => {
   let [journal, setJournal] = useState("");
   let [imageURL, setImageURL] = useState("");
   let [predictedMood, setPredictedMood] = useState("");
+  let [logo, setLogo] = useState(<span></span>);
 
   const handleJournalChange = (event) => {
     setJournal(event.target.value);
@@ -23,6 +28,7 @@ const CreateEntry = (props) => {
     setImageURL(event.target.value);
     console.log(`current imageURL is ${imageURL}`);
   };
+
 
   const createEntry = (event) => {
     event.preventDefault();
@@ -40,6 +46,17 @@ const CreateEntry = (props) => {
       console.log(response);
       console.log(response.data.data.mood);
       setPredictedMood(response.data.data.mood);
+      if (response.data.data.mood === ""){
+        setLogo(<span></span>)
+      } else {
+        if (response.data.data.mood === "positive"){
+          setLogo(<img src={posFrog} width={68} height={68} />)
+        } else if (response.data.data.mood === "negative"){
+          setLogo(<img src={negFrog} width={68} height={68} />)
+        } else {
+          setLogo(<img src={neuFrog} width={68} height={68} />)
+        }
+      }
       // navigate("/");
     })
 
@@ -74,9 +91,8 @@ const CreateEntry = (props) => {
 
     
     
-    
     <div className="picture-options-container">
-    <div className="picture-option">Based off of your diary entry, Froggy predicts that you are feeling: {predictedMood}</div>
+    <div className="picture-option">Based off of your diary entry, Froggy predicts that you are feeling: {logo}</div>
     <div className="picture-option">Add a picture to your entry</div>
 
       
