@@ -6,26 +6,40 @@ import "./ViewEntry.css";
 const ViewEntry = (props) => {
     return (
         <React.Fragment>
-                <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div>
-        <TextField
-          id="outlined-multiline-static"
-          multiline
-          rows={8}
-          defaultValue="This is where the existing content goes"
-        />
-      </div>
-    </Box>
+       <Box className="text-field-container">
 
-    <div>Based off of your diary entry. Froggy predicts that you are feeling: Happy</div>
-    <div>Your pictures: </div>
+<div>
+
+  
+<TextField
+id="outlined-multiline-static"
+multiline
+rows={8}
+defaultValue={props.entry.journal}
+className="text-field-container"
+
+
+
+/>
+</div>
+
+
+</Box>
+
+
+<button className="enter-button">Edit</button>
+
+
+
+
+<div className="picture-options-container">
+<div className="picture-option">Based off of your diary entry, Froggy predicts that you are feeling:</div>
+<div className="picture-option">Your Pictures:</div>
+
+  
+</div>
+
+
     
         </React.Fragment>
     );
