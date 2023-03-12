@@ -24,7 +24,7 @@ const CreateEntry = (props) => {
 
   const createEntry = (event) => {
     event.preventDefault();
-
+  
     const entry = {
       journal: journal,
       imageURL: imageURL,

@@ -6,6 +6,7 @@ import mongoose from "mongoose"; //Mongoose is a MongoDB library
 // import DiaryEntry from "./models/diaryentry.js";
 import router from "./router.js";
 
+
 const app = express();
 dotenv.config();
 app.use(express.json());
