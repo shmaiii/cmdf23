@@ -1,0 +1,16 @@
+#dialog-button {
+    background-color: #59BA89;
+    color: #FFFFFF;
+    border-radius: 60px;
+    font-weight: 600;
+}
+
+#dialog-button:hover {
+    background-color: #E1F396;
+    color: #01575C;
+    border-radius: 60px;
+}
+
+#title-date {
+    font-size: 20px;
+}

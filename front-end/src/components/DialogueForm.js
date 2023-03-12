@@ -9,6 +9,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import CreateEntry from '../pages/CreateEntry';
 import ViewEntry from '../pages/ViewEntry';
 import './Dialogue.css';
+import { padding } from '@mui/system';
 
 export default function FormDialog(props) {
   const [open, setOpen] = React.useState(false);
@@ -33,27 +34,29 @@ export default function FormDialog(props) {
       <Button variant="outlined" onClick={handleClickOpen}>
         Open form dialog
       </Button>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Add a diary entry <span> March 12, 2023</span></DialogTitle>
+      <Dialog open={open} onClose={handleClose} maxWidth="lg">
+        <DialogTitle
+          fontFamily={'Public Sans, sans-serif'}
+          fontWeight= {"600"}
+          fontSize= {"40px"}
+          color= {"#01575C"}
+        >
+        Add a diary entry <span id="title-date"> March 12, 2023</span></DialogTitle>
         <DialogContent>
             {content}
-          {/* <DialogContentText>
-            To subscribe to this website, please enter your email address here. We
-            will send updates occasionally.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-            variant="standard"
-          /> */}
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Finish</Button>
+          <Button onClick={handleClose} id="dialog-button">
+            <div style={{padding: "0px 20px"}}>
+              Cancel
+            </div>
+          </Button>
+          <Button onClick={handleClose} id="dialog-button">
+          <div style={{padding: "0px 20px"}}>
+              Finish
+            </div>
+            </Button> 
+          
         </DialogActions>
       </Dialog>
     </div>
