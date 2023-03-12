@@ -7,11 +7,15 @@ if (process.argv.length<3) {
 
 const password = process.argv[2]
 
-const url =
-`mongodb+srv://cmdf23:cmdf23password@cmdf23.xo9ng9m.mongodb.net/?retryWrites=true&w=majority`
-
 mongoose.set('strictQuery',false)
+const url = process.env.MONGODB_URI
 mongoose.connect(url)
+.then(result => {
+  console.log('connected to MongoDB')
+})
+.catch((error) => {
+  console.log('error:', error.message)
+})
 
 const noteSchema = new mongoose.Schema({
   content: String,
