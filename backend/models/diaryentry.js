@@ -9,6 +9,15 @@ const diaryEntrySchema = new Schema(
         images: [{type: String}],
         videos: [{type: String}],
         timestamps: true,
-        
+        user: {
+            type: mongoose.ObjectId,
+            ref: "User"
+        },
+        mood: {
+            type: String
+        }
     }
-)
+);
+
+const DiaryEntry = mongoose.model("DiaryEntry", diaryEntrySchema);
+export default DiaryEntry;
