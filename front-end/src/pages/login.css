@@ -1,4 +1,4 @@
-/* *{
+ /* *{
   background-color: #F3F9F4;
 } */
 
@@ -6,11 +6,11 @@
     background-color: #01575C !important;
     border-color: #01575C !important;
     border-radius: 10px !important;
-    padding: 10px 50px !important;
+    width: 384px;
     text-align: center;
     margin-top: 20px;
     align-items: center;
-    
+    margin-top: 50px;
   }
 
   h3 {
@@ -24,7 +24,19 @@
 
  .form-group label {
     text-align: left;
+    font-weight: 500;
+    color: #01575C;
+    padding-bottom: 5px;
+ }
 
+ .form-group {
+   border-color: #01575C;
+ }
+
+ .form-group input {
+  border-color: #01575C;
+  border-width: 1.5px;
+  border-radius: 10px;
  }
 
  .float-container-form{
@@ -39,8 +51,20 @@
  }
 
  .float-child2-form {
-   margin-top: 20px;
-   padding-top: 40px;
-   float:right;
+   padding-top: 80px;
+   padding-left: 50px;
+   margin-left: 20px;
+   float:left;
    width: 434px;
  }
+
+ p {
+   font-size: 40px;
+   font-weight: 600;
+ }
+
+ .center {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
