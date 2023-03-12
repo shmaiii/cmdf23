@@ -46,6 +46,16 @@ const CreateEntry = (props) => {
       console.log(response);
       console.log(response.data.data.mood);
       setPredictedMood(response.data.data.mood);
+
+      props.setEntry({
+        date: response.data.data.date,
+        images: response.data.data.images,
+        journal: response.data.data.journal,
+        mood: response.data.data.mood,
+      })
+      console.log(props.entry);
+
+      props.setCreated(true);
       if (response.data.data.mood === ""){
         setLogo(<span></span>)
       } else {
@@ -57,7 +67,7 @@ const CreateEntry = (props) => {
           setLogo(<img src={neuFrog} width={68} height={68} />)
         }
       }
-      // navigate("/");
+     
     })
 
 
