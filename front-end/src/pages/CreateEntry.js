@@ -27,6 +27,7 @@ const CreateEntry = (props) => {
     <div>Based off of your diary entry. Froggy predicts that you are feeling: Happy</div>
     <div>Add a picture to your entry</div>
     <div>Or, enter an image URL</div>
+    <TextField id="outlined-basic" label="Image URL" variant="outlined"></TextField>
         </React.Fragment>
     );
 }
