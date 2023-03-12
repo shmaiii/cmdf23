@@ -11,6 +11,8 @@ import grace from '../images/Group 8.png';
 import './ActivityBar.css';
 import Home from '../pages/Home';
 import Button from 'react-bootstrap/Button';
+import activityLogo from '../images/activity_logo.png';
+import Navbar from './Navbar';
 
 
 function ActivityBar() {
@@ -20,6 +22,7 @@ function ActivityBar() {
         <header> 
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
         </header>
+        <Navbar/>
         <div class="float-container">
             <div class="float-child1">
               <p>Hi Emily, how are you</p>
@@ -30,8 +33,8 @@ function ActivityBar() {
               <Home/>
             </div>
         <div class="float-child2">
-          <div className="activity-bar-text">
-            <FiIcons.FiActivity style = {{color: '#01575C'}} />
+          <div className="activity-bar-text" align="center">
+            <img src={activityLogo} style={{width: "15%", height: "15%"}}/>
             <p className="activitybar-text"> Activity</p>
           </div>
 
