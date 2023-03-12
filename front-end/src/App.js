@@ -5,7 +5,7 @@ import FormDialog from './components/DialogueForm';
 function App() {
   return (
     <div className="App">
-      <FormDialog status="create"/>
+      <FormDialog status="createe"/>
     </div>
   );
 }
