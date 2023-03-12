@@ -9,10 +9,26 @@ import axios from 'axios';
 
 const ViewEntry = (props) => {
     let [journal, setJournal] = useState(props.entry.journal);
+    let [img, setImg] = useState(props.entry.images);
+
+    if (img === "") {
+        setImg('https://images.unsplash.com/photo-1590650046871-92c887180603?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80');
+    }
 
     const handleChange = (event) => {
         setJournal(event.target.value);
     }
+
+    let getMood = <img src={neuFrog} width={68} height={68} />
+    
+        if (props.entry.mood == "positive"){
+            getMood =  <img src={posFrog} width={68} height={68} />;
+        } else if (props.entry.mood == "negative") {
+            getMood =  <img src={negFrog} width={68} height={68} />
+        } else {
+            getMood =  <img src={neuFrog} width={68} height={68} />
+        }
+    
     const editEntry = (event) => {
         event.preventDefault();
 
@@ -61,13 +77,13 @@ onChange={handleChange}
 
 
 <div className="picture-options-container">
-{/* <div className="picture-option">Froggy analyzed that you were feeling: </div> */}
+<div className="picture-option">Froggy analyzed that you were feeling: {props.entry.mood} {getMood}</div> 
 <div className="picture-option">Your Pictures:</div>
 
 {/* <div class="row">
 <div class="column1"> */}
-<img src={props.entry.images} 
-width= "133" height= "133"/>
+
+<img src={img} width= "133" height= "133"/>
 {/* </div> */}
 {/* 
 <div class="column2">
@@ -78,6 +94,9 @@ width= "200" height= "133"/>
 
   
 </div>
+
+
+
 
 
     

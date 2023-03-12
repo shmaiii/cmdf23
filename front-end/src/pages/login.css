@@ -1,0 +1,46 @@
+/* *{
+  background-color: #F3F9F4;
+} */
+
+.btn-primary {
+    background-color: #01575C !important;
+    border-color: #01575C !important;
+    border-radius: 10px !important;
+    padding: 10px 50px !important;
+    text-align: center;
+    margin-top: 20px;
+    align-items: center;
+    
+  }
+
+  h3 {
+
+    margin-left: 650px;
+    margin-right: 50px;
+    margin-top: 60px;
+    padding-top: 200px;
+    text-align: left;
+  }
+
+ .form-group label {
+    text-align: left;
+
+ }
+
+ .float-container-form{
+   padding-top: 200px;
+   padding-bottom: 10px;
+   margin-left: 350px;
+ }
+
+ .float-child1-form {
+   float: left;
+   width: 384px;
+ }
+
+ .float-child2-form {
+   margin-top: 20px;
+   padding-top: 40px;
+   float:right;
+   width: 434px;
+ }
