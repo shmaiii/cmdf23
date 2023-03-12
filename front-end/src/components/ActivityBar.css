@@ -1,0 +1,38 @@
+.activity-bar {
+    background-color: #E1F396;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 25px;
+    padding-top: 100px;
+  }
+  
+  .activity-bar img {
+    margin-bottom: 10px;
+  }
+
+  .activity-bar__alex {
+    padding: auto;
+  }
+
+  .activity-bar__sam {
+    padding: auto;
+  }
+
+  .activity-bar-text {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  margin-top: 0px;
+  }
+  
+  .activitybar-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #01575C;
+    margin-right: 10px;
+  }
+  
