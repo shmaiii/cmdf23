@@ -83,7 +83,7 @@ onChange={handleChange}
 {/* <div class="row">
 <div class="column1"> */}
 
-<img src={img} width= "133" height= "133"/>
+<img src={img} width= "200" height= "133"/>
 {/* </div> */}
 {/* 
 <div class="column2">
