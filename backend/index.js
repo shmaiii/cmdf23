@@ -55,14 +55,6 @@ connection.once("open", () => {
 //     mongoose.connection.close();
 // })
 
-//some API endpoints to test:
-//get all entries from a specific user
-// app.get(`/api/diaryentries/:user_id`, (request, response) => {
-//     DiaryEntry.find({user: request.params.user_id}).then(entries => {
-//         response.json(entries);
-//     })
-// });
-
 app.use("/", router);
 
 const PORT = process.env.PORT || 3001;
