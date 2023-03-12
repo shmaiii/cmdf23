@@ -11,6 +11,7 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 app.use(cors());
+app.use(express.static('build'));
 
 //get uri from env var
 const url = process.env.MONGODB_URI;
