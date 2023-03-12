@@ -6,7 +6,7 @@ const diaryEntrySchema = new Schema(
         journal: {
             type: String,
         },
-        images: [{type: String}],
+        images: {type: String},
         videos: [{type: String}],
         date: {type: Date},
         user: {

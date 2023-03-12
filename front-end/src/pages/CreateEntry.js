@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import axios from 'axios';
+import { create } from '@mui/material/styles/createTransitions';
 // import { useNavigate } from "react-router-dom";
 
 const CreateEntry = (props) => {
@@ -11,6 +12,7 @@ const CreateEntry = (props) => {
 
   let [journal, setJournal] = useState("");
   let [imageURL, setImageURL] = useState("");
+  let [predictedMood, setPredictedMood] = useState("");
 
   const handleJournalChange = (event) => {
     setJournal(event.target.value);
@@ -27,7 +29,7 @@ const CreateEntry = (props) => {
   
     const entry = {
       journal: journal,
-      imageURL: imageURL,
+      images: imageURL,
       date: new Date(),
       user: '640d339a41d1606599987b9c',
     };
@@ -36,33 +38,60 @@ const CreateEntry = (props) => {
     .post(`http://localhost:3001/api/createEntry`, entry)
     .then(response => {
       console.log(response);
+      console.log(response.data.data.mood);
+      setPredictedMood(response.data.data.mood);
       // navigate("/");
     })
 
 
   }
+    
     return (
-      <React.Fragment>
-        <Box component="form" sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}}
-          noValidate
-          autoComplete="off">
-            <div>
-              <TextField
-                id="outlined-multiline-static"
-                multiline
-                rows={8}
-                placeholder="Type how you are feeling today"
-                onChange={handleJournalChange}
-              />
-            </div>
-          </Box>
+        <React.Fragment>
+               
 
-      <div>Based off of your diary entry. Froggy predicts that you are feeling: Happy</div>
-      <div>Add a picture to your entry</div>
-      <div>Or, enter an image URL</div>
-      <TextField id="outlined-basic" label="Image URL" variant="outlined" onChange={handleImageURLChange}></TextField>
-      <Button onClick={createEntry}>Finish</Button>
-      </React.Fragment>
+    <Box className="text-field-container">
+
+    <div>
+
+      
+<TextField
+  id="outlined-multiline-static"
+  multiline
+  rows={8}
+  placeholder="Type out how you are feeling today"
+  className="text-field-container"
+  onChange={handleJournalChange} 
+
+/>
+</div>
+
+
+    </Box>
+    
+    
+    <button className="enter-button" onClick={createEntry}>Enter</button>
+
+    
+    
+    
+    <div className="picture-options-container">
+    <div className="picture-option">Based off of your diary entry, Froggy predicts that you are feeling: {predictedMood}</div>
+    <div className="picture-option">Add a picture to your entry</div>
+
+      
+    </div>
+    
+    
+    <TextField 
+    id="outlined-basic" 
+    label="Image URL" 
+    variant="outlined"
+    onChange={handleImageURLChange}></TextField>
+
+    <button className="upload-button">Upload</button>
+        </React.Fragment>
+        
     );
 }
 
