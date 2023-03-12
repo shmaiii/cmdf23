@@ -15,7 +15,7 @@ const ViewEntry = (props) => {
 id="outlined-multiline-static"
 multiline
 rows={8}
-defaultValue="Type out how you are feeling today"
+defaultValue={props.entry.journal}
 className="text-field-container"
 
 

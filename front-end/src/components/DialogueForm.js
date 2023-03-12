@@ -11,35 +11,40 @@ import ViewEntry from '../pages/ViewEntry';
 import './Dialogue.css';
 import { padding } from '@mui/system';
 
+
 export default function FormDialog(props) {
-  const [open, setOpen] = React.useState(false);
+//   const [open, setOpen] = React.useState(false);
+console.log(props.entry)
   
   const status = props.status;
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+//   const handleClickOpen = () => {
+//     setOpen(true);
+//   };
 
   const handleClose = () => {
-    setOpen(false);
+    props.setOpen(false);
   };
   let content;
   let title;
   if (status === "create"){
-    content = <CreateEntry />
+    content = <CreateEntry setCreated={props.setCreated} setEntry={props.setEntry}/>
     title = "Add a diary entry"
   } else {
-    content = <ViewEntry />
+    content = <ViewEntry entry={props.entry}/>
     title = "Your Diary Entry"
   }
 
+//   if (props.open == true){
+//     handleClickOpen();
+//   }
   
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      {/* <Button variant="outlined" onClick={handleClickOpen}>
         Open form dialog
-      </Button>
-      <Dialog open={open} onClose={handleClose} maxWidth="lg">
+      </Button> */}
+      <Dialog open={props.open} onClose={handleClose} maxWidth="lg">
         <DialogTitle
           fontFamily={'Public Sans, sans-serif'}
           fontWeight= {"600"}
