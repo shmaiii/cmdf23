@@ -8,7 +8,7 @@ const diaryEntrySchema = new Schema(
         },
         images: [{type: String}],
         videos: [{type: String}],
-        timestamps: true,
+        date: {type: Date},
         user: {
             type: mongoose.ObjectId,
             ref: "User"
