@@ -11,6 +11,7 @@ import ViewEntry from '../pages/ViewEntry';
 import './Dialogue.css';
 import { padding } from '@mui/system';
 
+
 export default function FormDialog(props) {
   const [open, setOpen] = React.useState(false);
   
