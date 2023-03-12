@@ -1,0 +1,71 @@
+.activity-bar {
+    background-color: #F3F9F4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 25px;
+    padding-top: 100px;
+    font-family: 'Public Sans', sans-serif;
+  }
+  
+  .activity-bar img {
+    margin-bottom: 35px;
+  }
+
+  .activity-bar__alex {
+    padding: auto;
+  }
+
+  .activity-bar__sam {
+    padding: auto;
+  }
+
+  .activity-bar-text {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+  }
+  
+  .activitybar-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #01575C;
+    margin-right: 10px;
+  }
+
+  .float-container {
+    padding-bottom: 100px;
+
+}
+
+.float-child1 {
+    width: 75%;
+    float: left;
+    /* box-shadow: 4px 2px 24px 12px rgba(130,130,130,0.05);
+    border-radius: 20px; */
+    
+}  
+
+.float-child2 {
+  width: 25%;
+  float: right;
+  padding-left: 40px;
+}  
+  
+p {
+  font-size: 40px;
+  color:#01575C;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.btn-primary{
+  background-color: #59BA89 !important;
+  border-color: rgba(255, 255, 255, 0) !important;
+  width: 150px;
+  float: right;
+}

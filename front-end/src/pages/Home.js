@@ -1,8 +1,6 @@
-// import logo from './logo.svg';
-import './Home.css';
 import Calendar from 'react-calendar';
-import './calendar.css';
-
+import '../calendar.css';
+import Button from 'react-bootstrap/Button';
 
 
 function Home() {
@@ -11,24 +9,10 @@ function Home() {
     
   return (
     <div className="Home">
-      <header> {/* <header className="App-header"> */}
-         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-         {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+      <header> 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
       </header>
       <body>
-          Hi Emily, How are you doing today
           <div style={{
                 display: "flex",
                 alignItems: "center",
