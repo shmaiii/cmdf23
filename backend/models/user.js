@@ -5,9 +5,9 @@ const userSchema = new Schema(
     {
         username: String,
         password: String,
-        diary_entries: [{ 
-            type: mongoose.ObjectId, 
-            ref: "DiaryEntry"}],
+        // diary_entries: [{ 
+        //     type: mongoose.ObjectId, 
+        //     ref: "DiaryEntry"}],
         friends: [{
             type: mongoose.ObjectId,
             ref: "User"

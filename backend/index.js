@@ -1,10 +1,10 @@
 import dotenv from "dotenv";
 import express from "express"; // Express web server framework
 import cors from "cors"; // Allows for Cross Origin Resource Sharing
-import path from "path"; // Useful for path manipulation
 import mongoose from "mongoose"; //Mongoose is a MongoDB library
-import User from './models/user.js';
-import DiaryEntry from "./models/diaryentry.js";
+// import User from './models/user.js';
+// import DiaryEntry from "./models/diaryentry.js";
+import router from "./router.js";
 
 const app = express();
 dotenv.config();
@@ -46,14 +46,24 @@ connection.once("open", () => {
 //     images: [],
 //     videos: [],
 //     date: new Date(),
-//     user: User.findById('640d339a41d1606599987b9c'),
+//     user: '640d339a41d1606599987b9c',
 //     mood: 'positive'
 // })
 
-entry.save().then(result => {
-    console.log('save');
-    mongoose.connection.close();
-})
+// entry.save().then(result => {
+//     console.log('save');
+//     mongoose.connection.close();
+// })
+
+//some API endpoints to test:
+//get all entries from a specific user
+// app.get(`/api/diaryentries/:user_id`, (request, response) => {
+//     DiaryEntry.find({user: request.params.user_id}).then(entries => {
+//         response.json(entries);
+//     })
+// });
+
+app.use("/", router);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
